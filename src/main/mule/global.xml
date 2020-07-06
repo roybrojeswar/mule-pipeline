@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:njams="http://www.mulesoft.org/schema/mule/njams" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/njams http://www.mulesoft.org/schema/mule/njams/current/mule-njams.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <njams:configuration-file-config filename="njams\njams.properties" name="Njams_Configuration_file"/>
+</mule>
