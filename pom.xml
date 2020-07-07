@@ -26,6 +26,16 @@
         <version>${mule.maven.plugin.version}</version>
         <extensions>true</extensions>
         <configuration>
+        <cloudHubDeployment>
+                    <muleVersion>4.3.0</muleVersion>
+                    <username>BrojeswarRoyMuleSoft</username>
+                    <password>Brojeswar@2019</password>
+                    <environment>Sandbox</environment>
+                    <workerType>Micro</workerType>
+                    <workers>1</workers>
+                    <objectStoreV2>true</objectStoreV2>
+                    <applicationName>exavalu-mule-pipeline-api</applicationName>
+            </cloudHubDeployment>
           <sharedLibraries>
             <sharedLibrary>
               <groupId>com.faizsiegeln.njams</groupId>
