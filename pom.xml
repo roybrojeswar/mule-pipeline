@@ -67,6 +67,25 @@
                     </coverage>
                 </configuration>
             </plugin>
+			<plugin>
+				   <groupId>org.sonatype.plugins</groupId>
+				   <artifactId>nexus-staging-maven-plugin</artifactId>
+				   <version>1.6.8</version>
+				   <executions>
+					  <execution>
+						 <id>default-deploy</id>
+						 <phase>deploy</phase>
+						 <goals>
+							<goal>deploy</goal>
+						 </goals>
+					  </execution>
+				   </executions>
+				   <configuration>
+					  <serverId>nexus</serverId>
+					  <nexusUrl>http://localhost:8086/nexus/</nexusUrl>
+					  <skipStaging>true</skipStaging>
+				   </configuration>
+			</plugin>
         </plugins>
   </build>
   <dependencies>
@@ -107,6 +126,18 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+	<distributionManagement>
+	  <repository>
+	    <id>releases</id>
+	    <!-- CHANGE HERE by your team nexus server -->
+	    <url>http://localhost:8086/nexus/content/repositories/releases</url>
+	  </repository>
+	  <snapshotRepository>
+	    <id>Brojeswar-Repository</id>
+	    <!-- CHANGE HERE by your team nexus server -->
+	    <url>http://localhost:8086/nexus/content/repositories/Brojeswar-Repository</url>
+	  </snapshotRepository>
+	</distributionManagement>
   <repositories>
     <repository>
       <id>anypoint-exchange-v2</id>
